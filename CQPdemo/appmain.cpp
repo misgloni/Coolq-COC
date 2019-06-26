@@ -5,7 +5,6 @@
 */
 
 
-
 #include "stdafx.h"
 #include "string"
 #include "cqp.h"
@@ -145,9 +144,11 @@ public:
 class RandomMachine
 {
 public:
+	
 
 	int get(int limit)
 	{
+		srand(clock());
 		if (limit < 1)
 		{
 			limit = 1;
@@ -525,7 +526,6 @@ CQEVENT(int32_t, Initialize, 4)(int32_t AuthCode) {
 * 如非必要，不建议在这里加载窗口。（可以添加菜单，让用户手动打开窗口）
 */
 CQEVENT(int32_t, __eventStartup, 0)() {
-
 	return 0;
 }
 
